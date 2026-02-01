@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Drawing Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🎨 Word Drawing Game</h1>
+        <p class="subtitle">Guess the word before it finishes drawing!</p>
+
+        <div class="timer">Time: <span id="timeLeft">30</span>s</div>
+        <div class="timer-bar">
+            <div class="timer-fill" id="timerFill"></div>
+        </div>
+
+        <canvas id="canvas" width="500" height="150"></canvas>
+
+        <div class="input-group">
+            <input 
+                type="text" 
+                id="guessInput" 
+                placeholder="Type your guess here..."
+                autocomplete="off"
+            >
+            <button id="guessBtn">Guess</button>
+        </div>
+
+        <div class="message" id="message"></div>
+        <div class="game-over" id="gameOver"></div>
+        <div class="word-reveal" id="wordReveal"></div>
+
+        <button id="newGameBtn" style="margin-top: 20px; display: none;">New Game</button>
+
+        <div class="hint">Press Enter or click Guess to submit your answer</div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value" id="wins">0</div>
+                <div class="stat-label">Wins</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="losses">0</div>
+                <div class="stat-label">Losses</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="streak">0</div>
+                <div class="stat-label">Streak</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
