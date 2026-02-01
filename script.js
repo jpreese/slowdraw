@@ -31,6 +31,14 @@ document.getElementById('wins').textContent = wins;
 document.getElementById('losses').textContent = losses;
 document.getElementById('streak').textContent = streak;
 
+// Function to set canvas size responsively
+function resizeCanvas() {
+    const rect = canvas.parentElement.getBoundingClientRect();
+    const maxWidth = Math.min(rect.width - 20, 500);
+    canvas.width = maxWidth;
+    canvas.height = maxWidth * (150 / 500); // Maintain aspect ratio
+}
+
 function getRandomWord() {
     return words[Math.floor(Math.random() * words.length)];
 }
@@ -39,7 +47,10 @@ function drawText(progress) {
     // progress is 0 to 1
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    ctx.font = 'bold 80px Arial';
+    const isMobile = canvas.width < 400;
+    const fontSize = isMobile ? 50 : 80;
+
+    ctx.font = `bold ${fontSize}px Arial`;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
 
@@ -51,7 +62,7 @@ function drawText(progress) {
 
     // Draw the word with stroke animation (outline only)
     ctx.strokeStyle = '#667eea';
-    ctx.lineWidth = 3;
+    ctx.lineWidth = isMobile ? 2 : 3;
     ctx.lineCap = 'round';
     ctx.lineJoin = 'round';
 
@@ -174,5 +185,10 @@ guessInput.addEventListener('keypress', (e) => {
 
 newGameBtn.addEventListener('click', startNewGame);
 
-// Start the first game
+// Handle window resize for responsive canvas
+window.addEventListener('resize', resizeCanvas);
+window.addEventListener('orientationchange', resizeCanvas);
+
+// Initialize canvas size and start the first game
+resizeCanvas();
 startNewGame();
