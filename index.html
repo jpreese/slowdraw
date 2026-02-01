@@ -8,10 +8,10 @@
 </head>
 <body>
     <div class="game-container">
-        <h1>🎨 Word Drawing Game</h1>
+        <h1>Word Drawing Game</h1>
         <p class="subtitle">Guess the word before it finishes drawing!</p>
 
-        <div class="timer">Time: <span id="timeLeft">30</span>s</div>
+        <div class="timer">Time: <span id="timeLeft">30</span></div>
         <div class="timer-bar">
             <div class="timer-fill" id="timerFill"></div>
         </div>
@@ -32,7 +32,9 @@
         <div class="game-over" id="gameOver"></div>
         <div class="word-reveal" id="wordReveal"></div>
 
-        <button id="newGameBtn" style="margin-top: 20px; display: none;">New Game</button>
+        <div class="new-game-container">
+            <button id="newGameBtn">New Game</button>
+        </div>
 
         <div class="hint">Press Enter or click Guess to submit your answer</div>
 

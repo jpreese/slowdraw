@@ -1,10 +1,218 @@
 const words = [
-    'JAVASCRIPT', 'CANVAS', 'DRAWING', 'GAME', 'PROGRAMMING',
-    'COMPUTER', 'KEYBOARD', 'MONITOR', 'PIXEL', 'ANIMATION',
-    'INTERNET', 'ALGORITHM', 'DATABASE', 'FUNCTION', 'VARIABLE',
-    'LIBRARY', 'FRAMEWORK', 'BROWSER', 'SERVER', 'NETWORK',
-    'PUZZLE', 'CHALLENGE', 'SUCCESS', 'VICTORY', 'TRIUMPH',
-    'ARTIST', 'DESIGNER', 'DEVELOPER', 'ENGINEER', 'GENIUS'
+    // Technology & Computing
+    'JAVASCRIPT', 'CANVAS', 'DRAWING', 'GAME', 'COMPUTER',
+    'KEYBOARD', 'MONITOR', 'PIXEL', 'ANIMATION', 'INTERNET',
+    'ALGORITHM', 'DATABASE', 'FUNCTION', 'VARIABLE', 'LIBRARY',
+    'FRAMEWORK', 'BROWSER', 'SERVER', 'NETWORK', 'PUZZLE',
+    'CHALLENGE', 'SUCCESS', 'VICTORY', 'TRIUMPH', 'ARTIST',
+    'DESIGNER', 'DEVELOPER', 'ENGINEER', 'GENIUS', 'SOFTWARE',
+    'HARDWARE', 'MEMORY', 'STORAGE', 'SYSTEM', 'PROGRAM',
+    'CODING', 'SCRIPT', 'MODULE', 'WIDGET', 'PLUGIN',
+    'UPLOAD', 'DOWNLOAD', 'WEBSITE', 'DOMAIN', 'HOSTING',
+    'DIGITAL', 'VIRTUAL', 'CYBER', 'TECH', 'DATA',
+    // Fruits & Food
+    'APPLE', 'BANANA', 'ORANGE', 'GRAPE', 'LEMON',
+    'MANGO', 'PEACH', 'CHERRY', 'BERRY', 'MELON',
+    'KIWI', 'PLUM', 'PEAR', 'FIG', 'LIME',
+    'COCONUT', 'AVOCADO', 'PAPAYA', 'APRICOT', 'OLIVE',
+    'BREAD', 'BUTTER', 'CHEESE', 'PASTA', 'RICE',
+    'SALAD', 'SOUP', 'STEAK', 'CHICKEN', 'BACON',
+    'PIZZA', 'BURGER', 'SANDWICH', 'TACO', 'SUSHI',
+    'COOKIE', 'CAKE', 'PIE', 'CANDY', 'CHOCOLATE',
+    'COFFEE', 'TEA', 'JUICE', 'MILK', 'WINE',
+    'HONEY', 'SUGAR', 'SALT', 'PEPPER', 'SPICE',
+    // Nature & Geography
+    'WATER', 'RIVER', 'OCEAN', 'MOUNTAIN', 'VALLEY',
+    'FOREST', 'DESERT', 'ISLAND', 'SUNSET', 'SUNRISE',
+    'GARDEN', 'FLOWER', 'TREE', 'LEAF', 'BRANCH',
+    'MEADOW', 'PRAIRIE', 'JUNGLE', 'SWAMP', 'MARSH',
+    'LAKE', 'POND', 'STREAM', 'CREEK', 'WATERFALL',
+    'BEACH', 'SHORE', 'COAST', 'CLIFF', 'CANYON',
+    'CAVE', 'VOLCANO', 'GLACIER', 'ICEBERG', 'REEF',
+    'FIELD', 'HILL', 'PEAK', 'RIDGE', 'PLATEAU',
+    'ROCK', 'STONE', 'PEBBLE', 'SAND', 'SOIL',
+    'GRASS', 'MOSS', 'FERN', 'VINE', 'BUSH',
+    // Home & Furniture
+    'HOUSE', 'WINDOW', 'DOOR', 'ROOF', 'FLOOR',
+    'TABLE', 'CHAIR', 'LAMP', 'MIRROR', 'CLOCK',
+    'COUCH', 'SOFA', 'BED', 'PILLOW', 'BLANKET',
+    'CARPET', 'RUG', 'CURTAIN', 'SHELF', 'DRAWER',
+    'CLOSET', 'CABINET', 'DESK', 'BENCH', 'STOOL',
+    'KITCHEN', 'BATHROOM', 'BEDROOM', 'LIVING', 'DINING',
+    'GARAGE', 'BASEMENT', 'ATTIC', 'PORCH', 'BALCONY',
+    'FENCE', 'GATE', 'PATH', 'LAWN', 'PATIO',
+    'SINK', 'TUB', 'SHOWER', 'TOILET', 'FAUCET',
+    'STOVE', 'OVEN', 'FRIDGE', 'FREEZER', 'TOASTER',
+    // Office & School
+    'BOOK', 'PAPER', 'PENCIL', 'ERASER', 'NOTEBOOK',
+    'PEN', 'MARKER', 'CRAYON', 'RULER', 'SCISSORS',
+    'STAPLER', 'FOLDER', 'BINDER', 'TAPE', 'GLUE',
+    'ENVELOPE', 'STAMP', 'LETTER', 'NOTE', 'CARD',
+    'REPORT', 'ESSAY', 'THESIS', 'ARTICLE', 'JOURNAL',
+    'TEXTBOOK', 'NOVEL', 'MAGAZINE', 'MANUAL', 'GUIDE',
+    'LESSON', 'LECTURE', 'CLASS', 'COURSE', 'SEMINAR',
+    'EXAM', 'TEST', 'QUIZ', 'GRADE', 'SCORE',
+    'HOMEWORK', 'PROJECT', 'RESEARCH', 'STUDY', 'LEARNING',
+    'STUDENT', 'PUPIL', 'SCHOLAR', 'GRADUATE', 'ALUMNI',
+    // Music & Arts
+    'MUSIC', 'GUITAR', 'PIANO', 'DRUM', 'VIOLIN',
+    'DANCE', 'SINGER', 'MOVIE', 'THEATER', 'STAGE',
+    'SONG', 'MELODY', 'HARMONY', 'RHYTHM', 'BEAT',
+    'CHORD', 'NOTE', 'TEMPO', 'TUNE', 'LYRIC',
+    'BAND', 'ORCHESTRA', 'CHOIR', 'CONCERT', 'FESTIVAL',
+    'PAINTING', 'SCULPTURE', 'DRAWING', 'SKETCH', 'PORTRAIT',
+    'CANVAS', 'BRUSH', 'PALETTE', 'EASEL', 'FRAME',
+    'GALLERY', 'EXHIBIT', 'STUDIO', 'WORKSHOP', 'CRAFT',
+    'DRAMA', 'COMEDY', 'TRAGEDY', 'ROMANCE', 'HORROR',
+    'FICTION', 'FANTASY', 'MYSTERY', 'THRILLER', 'ACTION',
+    // Space & Science
+    'PLANET', 'STAR', 'MOON', 'GALAXY', 'COMET',
+    'ASTEROID', 'METEOR', 'NEBULA', 'COSMOS', 'UNIVERSE',
+    'ORBIT', 'GRAVITY', 'ROCKET', 'SHUTTLE', 'SATELLITE',
+    'TELESCOPE', 'RADAR', 'LASER', 'SOLAR', 'LUNAR',
+    'ATOM', 'MOLECULE', 'ELEMENT', 'COMPOUND', 'PARTICLE',
+    'ENERGY', 'FORCE', 'MOTION', 'VELOCITY', 'MASS',
+    'HEAT', 'LIGHT', 'SOUND', 'WAVE', 'FREQUENCY',
+    'ELECTRIC', 'MAGNETIC', 'NUCLEAR', 'CHEMICAL', 'PHYSICAL',
+    'BIOLOGY', 'CHEMISTRY', 'PHYSICS', 'GEOLOGY', 'ECOLOGY',
+    'THEORY', 'HYPOTHESIS', 'FORMULA', 'EQUATION', 'LAW',
+    // Animals
+    'ANIMAL', 'TIGER', 'LION', 'ELEPHANT', 'GIRAFFE',
+    'DOLPHIN', 'WHALE', 'SHARK', 'PENGUIN', 'EAGLE',
+    'BUTTERFLY', 'SPIDER', 'RABBIT', 'SQUIRREL', 'TURTLE',
+    'DOG', 'CAT', 'BIRD', 'FISH', 'HORSE',
+    'COW', 'PIG', 'SHEEP', 'GOAT', 'CHICKEN',
+    'DUCK', 'GOOSE', 'TURKEY', 'DEER', 'BEAR',
+    'WOLF', 'FOX', 'MONKEY', 'GORILLA', 'ZEBRA',
+    'HIPPO', 'RHINO', 'LEOPARD', 'CHEETAH', 'PANTHER',
+    'SNAKE', 'LIZARD', 'FROG', 'TOAD', 'ALLIGATOR',
+    'CRAB', 'LOBSTER', 'SHRIMP', 'OCTOPUS', 'JELLYFISH',
+    'ANT', 'BEE', 'WASP', 'FLY', 'MOSQUITO',
+    'BEETLE', 'CRICKET', 'MOTH', 'WORM', 'SNAIL',
+    'OWL', 'HAWK', 'FALCON', 'CROW', 'RAVEN',
+    'PARROT', 'PEACOCK', 'SWAN', 'FLAMINGO', 'PELICAN',
+    'SEAL', 'WALRUS', 'OTTER', 'BEAVER', 'MOLE',
+    // Professions
+    'DOCTOR', 'TEACHER', 'PILOT', 'CHEF', 'NURSE',
+    'LAWYER', 'FARMER', 'BAKER', 'WRITER', 'PAINTER',
+    'ACTOR', 'DIRECTOR', 'PRODUCER', 'MUSICIAN', 'DANCER',
+    'ATHLETE', 'COACH', 'TRAINER', 'MANAGER', 'LEADER',
+    'SCIENTIST', 'PROFESSOR', 'RESEARCHER', 'ANALYST', 'EXPERT',
+    'ARCHITECT', 'BUILDER', 'PLUMBER', 'MECHANIC', 'DRIVER',
+    'SAILOR', 'CAPTAIN', 'SOLDIER', 'OFFICER', 'GUARD',
+    'POLICE', 'FIREMAN', 'PARAMEDIC', 'DENTIST', 'SURGEON',
+    'THERAPIST', 'COUNSELOR', 'ADVISOR', 'CONSULTANT', 'AGENT',
+    'BANKER', 'ACCOUNTANT', 'BROKER', 'TRADER', 'INVESTOR',
+    // Electronics & Gadgets
+    'CAMERA', 'PHONE', 'LAPTOP', 'TABLET', 'SPEAKER',
+    'HEADPHONE', 'CHARGER', 'BATTERY', 'CABLE', 'ADAPTER',
+    'SCREEN', 'DISPLAY', 'PROJECTOR', 'PRINTER', 'SCANNER',
+    'ROUTER', 'MODEM', 'ANTENNA', 'RECEIVER', 'REMOTE',
+    'CONSOLE', 'JOYSTICK', 'MOUSE', 'TOUCHPAD', 'WEBCAM',
+    'MICROPHONE', 'AMPLIFIER', 'MIXER', 'RECORDER', 'PLAYER',
+    'SENSOR', 'DETECTOR', 'ALARM', 'TIMER', 'SWITCH',
+    'BUTTON', 'DIAL', 'KNOB', 'LEVER', 'PEDAL',
+    'CIRCUIT', 'CHIP', 'PROCESSOR', 'DRIVE', 'DISK',
+    'FLASH', 'CARD', 'PORT', 'SLOT', 'CONNECTOR',
+    // Clothing & Accessories
+    'HELMET', 'JACKET', 'GLOVES', 'BOOTS', 'SCARF',
+    'SHIRT', 'PANTS', 'SHORTS', 'DRESS', 'SKIRT',
+    'COAT', 'SWEATER', 'HOODIE', 'VEST', 'BLAZER',
+    'JEANS', 'LEGGINGS', 'SOCKS', 'SHOES', 'SANDALS',
+    'SNEAKERS', 'HEELS', 'SLIPPERS', 'HAT', 'CAP',
+    'BELT', 'TIE', 'BOW', 'RIBBON', 'BUCKLE',
+    'WATCH', 'BRACELET', 'NECKLACE', 'RING', 'EARRING',
+    'GLASSES', 'SUNGLASSES', 'GOGGLES', 'MASK', 'VISOR',
+    'BAG', 'PURSE', 'WALLET', 'BACKPACK', 'LUGGAGE',
+    'UMBRELLA', 'CANE', 'FAN', 'PARASOL', 'PONCHO',
+    // Transportation & Places
+    'BRIDGE', 'TUNNEL', 'HIGHWAY', 'RAILWAY', 'AIRPORT',
+    'CASTLE', 'PALACE', 'TEMPLE', 'CHURCH', 'MUSEUM',
+    'CAR', 'TRUCK', 'BUS', 'TRAIN', 'PLANE',
+    'BOAT', 'SHIP', 'YACHT', 'FERRY', 'CANOE',
+    'BICYCLE', 'MOTORCYCLE', 'SCOOTER', 'SKATEBOARD', 'WAGON',
+    'TAXI', 'AMBULANCE', 'FIRETRUCK', 'POLICE', 'TRACTOR',
+    'STATION', 'TERMINAL', 'PLATFORM', 'DOCK', 'PIER',
+    'RUNWAY', 'HANGAR', 'DEPOT', 'GARAGE', 'PARKING',
+    'STREET', 'AVENUE', 'BOULEVARD', 'ROAD', 'LANE',
+    'ALLEY', 'PLAZA', 'SQUARE', 'PARK', 'GARDEN',
+    // Materials & Elements
+    'DIAMOND', 'CRYSTAL', 'SILVER', 'GOLD', 'BRONZE',
+    'COPPER', 'IRON', 'STEEL', 'ALUMINUM', 'TITANIUM',
+    'PLATINUM', 'BRASS', 'TIN', 'LEAD', 'ZINC',
+    'WOOD', 'BAMBOO', 'CORK', 'RUBBER', 'LEATHER',
+    'COTTON', 'SILK', 'WOOL', 'LINEN', 'NYLON',
+    'PLASTIC', 'GLASS', 'CERAMIC', 'PORCELAIN', 'MARBLE',
+    'GRANITE', 'CONCRETE', 'CEMENT', 'BRICK', 'TILE',
+    'FABRIC', 'VELVET', 'SATIN', 'DENIM', 'FLEECE',
+    'WAX', 'OIL', 'GAS', 'FUEL', 'COAL',
+    'PAPER', 'CARDBOARD', 'FOAM', 'SPONGE', 'CLAY',
+    // Weather & Time
+    'THUNDER', 'RAINBOW', 'STORM', 'CLOUD', 'WIND',
+    'SPRING', 'SUMMER', 'AUTUMN', 'WINTER', 'SEASON',
+    'MORNING', 'EVENING', 'MIDNIGHT', 'DAWN', 'DUSK',
+    'RAIN', 'SNOW', 'HAIL', 'SLEET', 'FOG',
+    'MIST', 'DEW', 'FROST', 'ICE', 'BLIZZARD',
+    'HURRICANE', 'TORNADO', 'CYCLONE', 'TYPHOON', 'DROUGHT',
+    'SUNSHINE', 'SHADE', 'SHADOW', 'TWILIGHT', 'DAYLIGHT',
+    'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY',
+    'SATURDAY', 'SUNDAY', 'WEEKEND', 'WEEKDAY', 'HOLIDAY',
+    'JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY',
+    // Emotions & Concepts
+    'DREAM', 'WONDER', 'MAGIC', 'SECRET', 'HOPE',
+    'LOVE', 'JOY', 'PEACE', 'FAITH', 'TRUST',
+    'COURAGE', 'STRENGTH', 'WISDOM', 'KNOWLEDGE', 'TRUTH',
+    'FREEDOM', 'JUSTICE', 'HONOR', 'GLORY', 'PRIDE',
+    'PASSION', 'DESIRE', 'AMBITION', 'VISION', 'MISSION',
+    'POWER', 'FORCE', 'SPIRIT', 'SOUL', 'MIND',
+    'HEART', 'BRAIN', 'THOUGHT', 'IDEA', 'CONCEPT',
+    'MEMORY', 'EMOTION', 'FEELING', 'MOOD', 'ATTITUDE',
+    'FEAR', 'ANGER', 'SADNESS', 'WORRY', 'STRESS',
+    'CALM', 'RELIEF', 'COMFORT', 'SAFETY', 'SECURITY',
+    // Sports & Games
+    'SOCCER', 'FOOTBALL', 'BASEBALL', 'BASKETBALL', 'TENNIS',
+    'GOLF', 'HOCKEY', 'RUGBY', 'CRICKET', 'BOXING',
+    'SWIMMING', 'DIVING', 'SURFING', 'SKIING', 'SKATING',
+    'RUNNING', 'JOGGING', 'WALKING', 'HIKING', 'CLIMBING',
+    'CYCLING', 'RACING', 'WRESTLING', 'FENCING', 'ARCHERY',
+    'CHESS', 'CHECKERS', 'POKER', 'DOMINO', 'BINGO',
+    'BALL', 'BAT', 'RACKET', 'NET', 'GOAL',
+    'COURT', 'FIELD', 'TRACK', 'ARENA', 'STADIUM',
+    'TEAM', 'PLAYER', 'REFEREE', 'CHAMPION', 'WINNER',
+    'MEDAL', 'TROPHY', 'AWARD', 'PRIZE', 'RECORD',
+    // Body & Health
+    'HEAD', 'FACE', 'EYE', 'EAR', 'NOSE',
+    'MOUTH', 'TOOTH', 'TONGUE', 'LIP', 'CHIN',
+    'NECK', 'SHOULDER', 'ARM', 'ELBOW', 'WRIST',
+    'HAND', 'FINGER', 'THUMB', 'PALM', 'NAIL',
+    'CHEST', 'BACK', 'SPINE', 'RIB', 'HIP',
+    'LEG', 'KNEE', 'ANKLE', 'FOOT', 'TOE',
+    'SKIN', 'BONE', 'MUSCLE', 'NERVE', 'VEIN',
+    'BLOOD', 'ORGAN', 'LIVER', 'KIDNEY', 'LUNG',
+    'HEALTH', 'FITNESS', 'EXERCISE', 'DIET', 'NUTRITION',
+    'MEDICINE', 'VITAMIN', 'PROTEIN', 'MINERAL', 'CALCIUM',
+    // Actions & Verbs
+    'RUN', 'WALK', 'JUMP', 'CLIMB', 'SWIM',
+    'FLY', 'DRIVE', 'RIDE', 'SAIL', 'FLOAT',
+    'PUSH', 'PULL', 'LIFT', 'CARRY', 'THROW',
+    'CATCH', 'KICK', 'HIT', 'PUNCH', 'SLAP',
+    'CUT', 'CHOP', 'SLICE', 'DICE', 'MINCE',
+    'MIX', 'STIR', 'BLEND', 'POUR', 'FILL',
+    'OPEN', 'CLOSE', 'LOCK', 'UNLOCK', 'SEAL',
+    'READ', 'WRITE', 'SPEAK', 'LISTEN', 'WATCH',
+    'THINK', 'FEEL', 'KNOW', 'LEARN', 'TEACH',
+    'CREATE', 'BUILD', 'MAKE', 'FIX', 'REPAIR',
+    // Miscellaneous
+    'KING', 'QUEEN', 'PRINCE', 'PRINCESS', 'KNIGHT',
+    'WIZARD', 'WITCH', 'FAIRY', 'DRAGON', 'GIANT',
+    'HERO', 'VILLAIN', 'LEGEND', 'MYTH', 'TALE',
+    'STORY', 'CHAPTER', 'PAGE', 'WORD', 'SENTENCE',
+    'NUMBER', 'LETTER', 'SYMBOL', 'SIGN', 'CODE',
+    'KEY', 'LOCK', 'CHAIN', 'ROPE', 'WIRE',
+    'BOX', 'CONTAINER', 'PACKAGE', 'BUNDLE', 'STACK',
+    'PILE', 'HEAP', 'BUNCH', 'GROUP', 'SET',
+    'PAIR', 'COUPLE', 'TRIO', 'DOZEN', 'HUNDRED',
+    'ZERO', 'ONE', 'TWO', 'THREE', 'FOUR'
 ];
 
 const canvas = document.getElementById('canvas');
@@ -201,7 +409,7 @@ function startNewGame() {
     guessInput.value = '';
     guessInput.disabled = false;
     guessInput.focus();
-    newGameBtn.style.display = 'none';
+    newGameBtn.parentElement.style.display = 'none';
 
     if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
@@ -219,7 +427,7 @@ function endGame(won) {
     guessInput.disabled = true;
 
     if (won) {
-        gameOverDiv.textContent = '🎉 YOU WIN! 🎉';
+        gameOverDiv.textContent = 'YOU WIN!';
         messageDiv.textContent = 'Correct!';
         messageDiv.className = 'message success';
         wins++;
@@ -227,7 +435,7 @@ function endGame(won) {
         localStorage.setItem('wins', wins);
         localStorage.setItem('streak', streak);
     } else {
-        gameOverDiv.textContent = '😢 Game Over';
+        gameOverDiv.textContent = 'Game Over';
         messageDiv.textContent = 'You did not guess in time';
         messageDiv.className = 'message error';
         losses++;
@@ -237,7 +445,7 @@ function endGame(won) {
     }
 
     wordRevealDiv.textContent = currentWord;
-    newGameBtn.style.display = 'block';
+    newGameBtn.parentElement.style.display = 'flex';
 
     document.getElementById('wins').textContent = wins;
     document.getElementById('losses').textContent = losses;
